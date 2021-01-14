@@ -1,18 +1,17 @@
 # IMPORTANT
 
 This is still a work in progress, in the sense that the updated version of
-FlexColorScheme that supports this app has not yet been published on pub.dev.
-
+**FlexColorScheme** that supports this app has not yet been published on pub.dev.
 The example app is otherwise ready.
 
-This notice will be removed when it has been published, most likely Jan 15, 2021.
+This notice will be removed when it has been published, most likely Jan 16, 2021.
 
 ## Sysnavbar with FlexColorScheme
 
 Transparent Android system navigation bar with Flutter and FlexColorScheme.
 
 
-## About this Demo
+## About this Example
 
 This an extra Android companion example to the Flutter 
 package [**FlexColorScheme**](https://pub.dev/packages/flex_color_scheme).
@@ -110,4 +109,4 @@ compileSdkVersion 30
 
 You can find additional info and discussion about transparent system navigation in Flutter Android apps in 
 [**Flutter issue 69999**](https://github.com/flutter/flutter/issues/69999), it was that discussion that lead me
-to adding this experimental support for it in FlexColorScheme.
+to adding this experimental support for it in [**FlexColorScheme**](https://pub.dev/packages/flex_color_scheme).
