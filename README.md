@@ -57,7 +57,8 @@ class MainActivity: FlutterActivity() {
 }
 ```
 
-Additionally, you must use Android SDK 30 to build the Flutter Android project, so you also need to update you `build.gradle` file in `../android/app` from:
+Additionally, you must use Android SDK 30 to build the Flutter Android project, so you also need to update 
+your `build.gradle` file in `../android/app` from:
 
 ```kotlin
  :
@@ -107,3 +108,6 @@ compileSdkVersion 30
   :
 ```
 
+You can find additional info and discussion about transparent system navigation in Flutter Android apps in 
+[**Flutter issue 69999**](https://github.com/flutter/flutter/issues/69999), it was that discussion that lead me
+to adding this experimental support for it in FlexColorScheme.
