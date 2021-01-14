@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/cupertino.dart';
@@ -6,7 +7,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:device_info/device_info.dart';
-import 'dart:io';
 
 import 'all_shared_imports.dart';
 
@@ -15,7 +15,8 @@ import 'all_shared_imports.dart';
 //
 // This example builds on example number 5 bundled with FlexColorScheme package:
 // https://pub.dev/packages/flex_color_scheme
-// To show how you can use
+// To show how you can use transparent system navigation bar in Flutter Android
+// apps together with FlexColorScheme.
 //
 // It also shows how you can use all the built in color schemes in
 // FlexColorScheme to define themes from them and how you can define your own
@@ -200,7 +201,7 @@ class _DemoAppState extends State<DemoApp> {
   void initState() {
     super.initState();
     themeMode = ThemeMode.light;
-    themeIndex = 7; // Start with deep blue sea.
+    themeIndex = 5; // Start with hippie blue theme.
     flexSurface = FlexSurface.heavy;
     flexAppBarStyle = FlexAppBarStyle.background;
     appBarElevation = 0;
@@ -540,7 +541,10 @@ class _HomePageState extends State<HomePage> {
     currentSidePanelWidth = AppConst.expandWidth;
     isSidePanelExpanded = true;
     showSidePanel = true;
-    opacity = 0.75;
+    // Start with fully transparent, note, if we make it "0" the default scrim
+    // will become visible, this can also be used if desired. You can try it
+    // with the slider in this example.
+    opacity = 0.01;
   }
 
   @override
