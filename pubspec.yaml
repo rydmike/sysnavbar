@@ -1,0 +1,71 @@
+name: sysnavbar
+description: Transparent Android system navigation bar with Flutter and FlexColorScheme package.
+version: 0.1.0
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.0
+
+  device_info: ^1.0.0
+
+  # Color scheme package (by Mike Rydstrom, rydmike.com).
+  flex_color_scheme:
+    path: ..\flex_color_scheme
+
+  # The Flutter SDK (by Google flutter.dev).
+  flutter:
+    sdk: flutter
+
+  # Used for launching a WEB URL (by Google flutter.dev).
+  url_launcher: ^5.7.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  # All image assets used by the program.
+  #   Only an app icon used in the About dialog for now
+  assets:
+    - assets/images/
+  # All bundled fonts
+  fonts:
+    # While Roboto is included in Android Flutter, it is not available on all platforms
+    # to ensure that we get the actual Roboto font on all platform we include it as an asset.
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto/Roboto-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Roboto/Roboto-ThinItalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/Roboto/Roboto-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/Roboto/Roboto-RegularItalic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/Roboto/Roboto-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Roboto/Roboto-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Roboto/Roboto-BlackItalic.ttf
+          weight: 900
+          style: italic
