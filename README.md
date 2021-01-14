@@ -1,6 +1,16 @@
+# IMPORTANT
+
+This is still a work in progress, in the sense that the updated version of
+FlexColorScheme that supports this app has not yet been published on pub.dev.
+
+The example app is otherwise ready.
+
+This notice will be removed when it has been published, most likely Jan 15, 2021.
+
 ## Sysnavbar with FlexColorScheme
 
 Transparent Android system navigation bar with Flutter and FlexColorScheme.
+
 
 ## About this Demo
 
@@ -20,7 +30,7 @@ file in your Flutter Android embedder:
 in `../android/app/src/main` the default `MainActivity.kt` for your project:
 
 ```kotlin
-package com.rydmike.sysnavbar
+package com.rydmike.sysnavbar  // Replace with your package name
 
 import io.flutter.embedding.android.FlutterActivity
 
@@ -31,7 +41,7 @@ class MainActivity: FlutterActivity() {
 is changed to:
 
 ```kotlin
-package com.rydmike.sysnavbar
+package com.rydmike.sysnavbar  // Replace with your package name
 
 import android.os.Build
 import android.os.Bundle
