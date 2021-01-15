@@ -150,3 +150,8 @@ use gestures. Some Android implementations don't even use a visible system navig
 this configuration also works with such Android implementation, like eg OnePlus gestures.
 
 <img src="https://github.com/rydmike/sysnavbar/blob/master/resources/sysnavbar4.gif?raw=true" alt="System navbar transparent"/>
+
+>Please note that phones with API30 (Android 11), were when this was written (Jan 16, 2021) still very
+>rare, and at the time did not even register on
+>[**statcounter**](https://gs.statcounter.com/os-version-market-share/android/mobile-tablet/worldwide). This
+> will improve over time.
