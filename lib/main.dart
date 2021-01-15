@@ -860,7 +860,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     const ListTile(
                       subtitle: Text(
-                        'On Android SDK<30 the above would only makes the '
+                        'On Android SDK<30 the above would only make the '
                         'color on the system nav bar transparent, which does '
                         'not look nice. This example include extra code to '
                         'handle it by using the package "device_info" to read '
@@ -868,6 +868,21 @@ class _HomePageState extends State<HomePage> {
                         'background color is kept for such devices. ',
                       ),
                     ),
+                    const Divider(),
+                    // Open a sub-page
+                    ListTile(
+                      title: const Text('Open a demo subpage'),
+                      subtitle: const Text(
+                        'The subpage will use the same '
+                        'color scheme based theme automatically.',
+                      ),
+                      trailing: const Icon(Icons.chevron_right, size: 34),
+                      onTap: () {
+                        Subpage.show(context,
+                            androidLevel: widget.androidLevel);
+                      },
+                    ),
+                    const Divider(),
                     const ListTile(
                       title: Text('Tab bar theme'),
                       subtitle: Text(
@@ -1004,7 +1019,6 @@ class _HomePageState extends State<HomePage> {
                         'you primarily intend to use the TabBar.',
                       ),
                     ),
-
                     const SizedBox(height: 4),
                     // AppBar style
                     CupertinoSegmentedControl<FlexTabBarStyle>(
@@ -1049,20 +1063,6 @@ class _HomePageState extends State<HomePage> {
                       ),
                       value: widget.useToTheme,
                       onChanged: widget.onUseToThemeChanged,
-                    ),
-                    const Divider(),
-                    // Open a sub-page
-                    ListTile(
-                      title: const Text('Open a demo subpage'),
-                      subtitle: const Text(
-                        'The subpage will use the same '
-                        'color scheme based theme automatically.',
-                      ),
-                      trailing: const Icon(Icons.chevron_right, size: 34),
-                      onTap: () {
-                        Subpage.show(context,
-                            androidLevel: widget.androidLevel);
-                      },
                     ),
                     const Divider(),
                     Text('Menu', style: headline4),

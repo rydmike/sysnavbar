@@ -110,3 +110,17 @@ compileSdkVersion 30
 You can find additional info and discussion about transparent system navigation in Flutter Android apps in 
 [**Flutter issue 69999**](https://github.com/flutter/flutter/issues/69999), it was that discussion that lead me
 to adding this experimental support for it in [**FlexColorScheme**](https://pub.dev/packages/flex_color_scheme).
+
+## How to design for both transparent and color branded
+
+When you want to use color branded system navigation bar it is best to never put any transparency on it if it is not
+supported. Adding transparency to the system navigation bar color when it is not supported will just make
+the color on it transparent and show the default scrim color used on the system navigation bar. This will not look
+very nice.
+
+If you design your app to use transparent system navigation bar when it is supported and want to use and have a nice
+look background color branded system navigation bar color when transparency is not supported, then we must
+check Android SDK level the application is running on adjust the behaviour accordingly. You can use the package
+`device_info` to get the Android SDK level and keep the `opacity` as 1 when SDK level is < 30.
+
+This example also presents one suggestion of how this can be accomplished.
