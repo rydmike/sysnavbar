@@ -123,4 +123,9 @@ look background color branded system navigation bar color when transparency is n
 check Android SDK level the application is running on adjust the behaviour accordingly. You can use the package
 `device_info` to get the Android SDK level and keep the `opacity` as 1 when SDK level is < 30.
 
-This example also presents one suggestion of how this can be accomplished.
+This example also presents one suggestion on how this can be accomplished.
+
+The end result is an app looking like the left one, when transparency is supported and like the right one, 
+when it is not.
+
+<img src="https://github.com/rydmike/sysnavbar/blob/master/resources/sysnavbar4.gif?raw=true" alt="System navbar transparent"/>
