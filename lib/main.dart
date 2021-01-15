@@ -858,9 +858,10 @@ class _HomePageState extends State<HomePage> {
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
                     ),
-                    const ListTile(
+                    ListTile(
                       subtitle: Text(
-                        'On Android SDK<30 the above would only make the '
+                        'Found Android SDK ${widget.androidLevel}.\n'
+                        'On SDK<30 the above would only make the '
                         'color on the system nav bar transparent, which does '
                         'not look nice. This example include extra code to '
                         'handle it by using the package "device_info" to read '
