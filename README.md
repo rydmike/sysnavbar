@@ -139,7 +139,7 @@ when it is not. I kind of like it.
 
 This setup also supports the much smaller Android system navigation bar you get when the phone is configured to 
 use gestures. Some Android implementations don't even use a visible system navigation bar when gestures are enabled,
-this configuration also works with such Android implementation, like eg OnePlus gestures.
+this configuration also works with such Android implementation, like e.g. OnePlus gestures.
 
 <img src="https://github.com/rydmike/sysnavbar/blob/master/resources/sysnavbar4.gif?raw=true" alt="System navbar transparent"/>
 
