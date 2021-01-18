@@ -1,15 +1,6 @@
-# IMPORTANT
-
-This is still a work in progress, in the sense that the updated version of
-**FlexColorScheme** that supports this app has not yet been published on pub.dev.
-The example app is otherwise ready.
-
-This notice will be removed when it has been published, most likely Jan 16, 2021.
-
-## Sysnavbar with FlexColorScheme
+# Sysnavbar with FlexColorScheme
 
 Transparent Android system navigation bar with Flutter and FlexColorScheme.
-
 
 ## About this Example
 
@@ -129,7 +120,8 @@ the use cases.
 In the sub-page in this example, it also shows how you can use a fully transparent system navigation bar when possible,
 and for the case when this is not possible, a color branded opaque one. Then combine this with a same background primary 
 color branded Material `BottomNavigationBar` using a slight transparency. For the case that support 
-transparency on the system navigation bar, when it is placed on top of this `BottomNavigationBar` with its slight transparency, it makes `BottomNavigationBar` and system navigation bar look like one shared translucent bottom area, 
+transparency on the system navigation bar, when it is placed on top of this `BottomNavigationBar` with its slight 
+transparency, it makes `BottomNavigationBar` and system navigation bar look like one shared translucent bottom area, 
 with content scrolling behind it. 
 
 For the case when the system navigation bar transparency is not supported, it still has 
