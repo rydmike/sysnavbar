@@ -10,12 +10,12 @@ class AppConst {
   // When I build a new public version I just make sure to update this info
   // before building them.
   static const String appName = 'SysNavBar';
-  static const String appVersion = '0.1.0';
-  static const String pkgVersion = '1.4.0';
+  static const String appVersion = '1.0.0';
+  static const String pkgVersion = '2.0.0';
   static const String packageVersion = 'FlexColorScheme package $pkgVersion';
   static const String packageUrl = 'https://pub.dev/packages/flex_color_scheme';
-  static const String flutterVersion = '1.22.5 Channel Stable';
-  static const String copyright = '© 2020';
+  static const String flutterVersion = '2.0.2 Channel Stable';
+  static const String copyright = '© 2020, 2021';
   static const String author = 'Mike Rydstrom';
   static const String license = 'BSD 3-Clause License';
   static const String icon = 'assets/images/app_icon.png';

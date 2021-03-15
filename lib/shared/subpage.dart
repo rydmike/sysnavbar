@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import 'package:device_info/device_info.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,7 +16,7 @@ import '../all_shared_imports.dart';
 // based theme.
 //
 class Subpage extends StatefulWidget {
-  const Subpage({this.androidLevel = 0, Key key}) : super(key: key);
+  const Subpage({Key? key, this.androidLevel = 0}) : super(key: key);
   final int androidLevel;
 
   // A static convenience function show this screen, as pushed on top.
@@ -39,7 +36,7 @@ class Subpage extends StatefulWidget {
 }
 
 class _SubpageState extends State<Subpage> {
-  int _buttonIndex;
+  late int _buttonIndex;
 
   @override
   void initState() {
@@ -51,7 +48,13 @@ class _SubpageState extends State<Subpage> {
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     final TextTheme textTheme = theme.textTheme;
-    final TextStyle headline4 = textTheme.headline4;
+    final TextStyle headline4 = textTheme.headline4!;
+    final bool isDark = Theme.of(context).brightness == Brightness.dark;
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
+    final Color appBarBackground = theme.appBarTheme.color?.withOpacity(0.96) ??
+        (isDark
+            ? colorScheme.surface.withOpacity(0.96)
+            : colorScheme.primary.withOpacity(0.96));
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       // FlexColorScheme contains a helper that can be use to theme
@@ -85,33 +88,12 @@ class _SubpageState extends State<Subpage> {
         child: Scaffold(
           extendBody: true,
           extendBodyBehindAppBar: true,
-          // resizeToAvoidBottomInset: true,
-          // resizeToAvoidBottomPadding: true,
           appBar: AppBar(
-            backgroundColor:
-                // This is only safe to access because we are using
-                // FlexColorScheme that always makes an appBarTheme that is not
-                // null. We give its current background color a bit of
-                // transparency so we can see things scrolling behind it.
-                // We can make a frosted glass background too, like on iOS, but
-                // that is beyond this simple example. It will be used and
-                // shown in the Flexfold demo later.
-                //
-                // I'm also not using the same gradient more complicated and
-                // nicer background as in the HomePage, just simple slight
-                // transparency. that has to be kept very low for it too look
-                // nice. with the gradient it can be a bit higher, with the
-                // frosted glass blur it can and should be much higher to look
-                // nice.
-                Theme.of(context).appBarTheme.color.withOpacity(0.96),
+            backgroundColor: appBarBackground,
             title: const Text('Subpage Demo'),
             actions: const <Widget>[AboutIconButton()],
             bottom: const TabBar(
               tabs: <Widget>[
-                // Tab(icon: Icon(Icons.home), text: 'Home'),
-                // Tab(icon: Icon(Icons.star), text: 'Favorites'),
-                // Tab(icon: Icon(Icons.face), text: 'Profile'),
-                // Tab(icon: Icon(Icons.settings), text: 'Settings'),
                 Tab(text: 'Home'),
                 Tab(text: 'Favorites'),
                 Tab(text: 'Profile'),

@@ -20,7 +20,7 @@ import 'package:flutter/material.dart';
 // on how each selected and demonstrated FlexColorScheme based theme looks like.
 class ThemeShowcase extends StatefulWidget {
   const ThemeShowcase({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -28,8 +28,8 @@ class ThemeShowcase extends StatefulWidget {
 }
 
 class _ThemeShowcaseState extends State<ThemeShowcase> {
-  TextEditingController textController1;
-  TextEditingController textController2;
+  late TextEditingController textController1;
+  late TextEditingController textController2;
   bool error1 = false;
   bool error2 = false;
   int _buttonIndex = 0;
@@ -78,13 +78,6 @@ class _ThemeShowcaseState extends State<ThemeShowcase> {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.all(8),
-          child: RaisedButton(
-            onPressed: () {},
-            child: const Text('RAISED BUTTON'),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8),
           child: ElevatedButton(
             onPressed: () {},
             child: const Text('ELEVATED BUTTON'),
@@ -92,23 +85,9 @@ class _ThemeShowcaseState extends State<ThemeShowcase> {
         ),
         Padding(
           padding: const EdgeInsets.all(8),
-          child: OutlineButton(
-            onPressed: () {},
-            child: const Text('OUTLINE BUTTON'),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8),
           child: OutlinedButton(
             onPressed: () {},
             child: const Text('OUTLINED BUTTON'),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8),
-          child: FlatButton(
-            onPressed: () {},
-            child: const Text('FLAT BUTTON'),
           ),
         ),
         Padding(
@@ -212,11 +191,11 @@ class _ThemeShowcaseState extends State<ThemeShowcase> {
       children: <Widget>[
         Checkbox(
           value: true,
-          onChanged: (bool value) {},
+          onChanged: (_) {},
         ),
         Checkbox(
           value: false,
-          onChanged: (bool value) {},
+          onChanged: (_) {},
         ),
         const Checkbox(
           value: false,
@@ -225,12 +204,12 @@ class _ThemeShowcaseState extends State<ThemeShowcase> {
         Radio<bool>(
           value: true,
           groupValue: true,
-          onChanged: (bool value) {},
+          onChanged: (_) {},
         ),
         Radio<bool>(
           value: false,
           groupValue: true,
-          onChanged: (bool value) {},
+          onChanged: (_) {},
         ),
         const Radio<bool>(
           value: false,
@@ -330,7 +309,7 @@ class _ThemeShowcaseState extends State<ThemeShowcase> {
     final bool isDark = Theme.of(context).brightness == Brightness.dark;
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
 
-    final Color effectiveTabBackground = Theme.of(context).appBarTheme?.color ??
+    final Color effectiveTabBackground = Theme.of(context).appBarTheme.color ??
         (isDark ? colorScheme.surface : colorScheme.primary);
 
     return Padding(
@@ -344,7 +323,7 @@ class _ThemeShowcaseState extends State<ThemeShowcase> {
           ),
           Text(
             'Use style FlexTabBarStyle.forAppBar',
-            style: Theme.of(context).textTheme.caption.copyWith(fontSize: 10),
+            style: Theme.of(context).textTheme.caption!.copyWith(fontSize: 10),
           ),
           Container(
             color: effectiveTabBackground,
@@ -382,7 +361,7 @@ class _ThemeShowcaseState extends State<ThemeShowcase> {
           ),
           Text(
             'Use style FlexTabBarStyle.forBackground',
-            style: Theme.of(context).textTheme.caption.copyWith(fontSize: 10),
+            style: Theme.of(context).textTheme.caption!.copyWith(fontSize: 10),
           ),
           const TabBar(
             tabs: <Widget>[
@@ -524,8 +503,8 @@ class _ThemeShowcaseState extends State<ThemeShowcase> {
       content: const Text('Let us help determine location. This means '
           'sending anonymous location data to us.'),
       actions: <Widget>[
-        FlatButton(onPressed: () {}, child: const Text('CANCEL')),
-        FlatButton(onPressed: () {}, child: const Text('ALLOW')),
+        TextButton(onPressed: () {}, child: const Text('CANCEL')),
+        TextButton(onPressed: () {}, child: const Text('ALLOW')),
       ],
       actionsPadding: const EdgeInsets.symmetric(horizontal: 16),
     );

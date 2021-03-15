@@ -11,6 +11,12 @@ It is a slight modification of example nr 5 bundled with the package and shows
 how FlexColorScheme can be used to make a transparent system navigation bar in 
 Flutter Android applications.
 
+### Change log
+
+**[1.0.0]** March 15, 2021: Updated to sound null safety and to use FlexColorScheme 2.0.0.
+
+**[0.1.0]** Jan 18, 2021: First version released with FlexColorScheme 1.4.0.
+
 
 ## Android setup
 

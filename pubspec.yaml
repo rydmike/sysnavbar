@@ -1,27 +1,31 @@
 name: sysnavbar
 description: Transparent Android system navigation bar with Flutter and FlexColorScheme package.
-version: 0.1.0
+version: 1.0.0
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.0
+  # https://pub.dev/packages/cupertino_icons
+  cupertino_icons: ^1.0.2
 
-  device_info: ^1.0.0
+  # Device info (by Google flutter.dev).
+  # https://pub.dev/packages/device_info
+  device_info: ^2.0.0
 
   # Color scheme package (by Mike Rydstrom, rydmike.com).
-  flex_color_scheme:
-    path: ..\flex_color_scheme
+  # https://pub.dev/packages/flex_color_scheme
+  flex_color_scheme: ^2.0.0
 
   # The Flutter SDK (by Google flutter.dev).
   flutter:
     sdk: flutter
 
   # Used for launching a WEB URL (by Google flutter.dev).
-  url_launcher: ^5.7.10
+  # https://pub.dev/packages/url_launcher
+  url_launcher: ^6.0.2
 
 dev_dependencies:
   flutter_test:
