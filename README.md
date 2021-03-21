@@ -5,18 +5,35 @@ Transparent Android system navigation bar with Flutter and FlexColorScheme.
 ## About this Example
 
 This an extra Android companion example to the Flutter 
-package [**FlexColorScheme**](https://pub.dev/packages/flex_color_scheme).
+package [**FlexColorScheme**](https://pub.dev/packages/flex_color_scheme). For more information about **FlexColorScheme** and its usage please refer to its
+[**readme**](https://pub.dev/packages/flex_color_scheme) file on pub.ev as well as its 
+[**API documentation**](https://pub.dev/documentation/flex_color_scheme/latest/flex_color_scheme/flex_color_scheme-library.html) there.
 
-It is a slight modification of example nr 5 bundled with the package and shows
-how FlexColorScheme can be used to make a transparent system navigation bar in 
+This example is a variation of example nr 5 bundled with the package and shows
+how **FlexColorScheme** can be used to make a transparent system navigation bar in 
 Flutter Android applications.
 
+> **NOTE:**  
+> The static helper `FlexColorScheme.themedSystemNavigationBar(context, ...)` is designed to provide a 
+> convenience wrapper for a `SystemUiOverlayStyle` that works for screens that use 
+> and adhere to current theme mode colors.
+> 
+> If your application use screens that do not follow the current theme, then just use `SystemUiOverlayStyle`
+> directly in the annotated region for such screens to define their desired style. You can also make your own
+> convenience wrapper function or even just a const value for it if you need to use a fixed style and 
+> design frequently.
+ 
 ### Change log
 
-**[1.0.0]** March 15, 2021: Updated to sound null safety and to use FlexColorScheme 2.0.0.
+**[1.1.0]** March 21, 2021:  
+Updated to use FlexColorScheme 2.1.0 and added a show/hide divider on top of system navigation bar on the 
+HomePage.
 
-**[0.1.0]** Jan 18, 2021: First version released with FlexColorScheme 1.4.0.
+**[1.0.0]** March 15, 2021:  
+Updated to sound null safety and to use FlexColorScheme 2.0.0.
 
+**[0.1.0]** Jan 18, 2021:  
+First version released with FlexColorScheme 1.4.0.
 
 ## Android setup
 

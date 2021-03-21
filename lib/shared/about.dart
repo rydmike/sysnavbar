@@ -4,10 +4,6 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'link_text_span.dart';
 
-// It is not necessary to review or understand the code in this file in order
-// to understand how to use the FlexColorScheme package demonstrated in
-// the examples.
-
 // An about icon button used on the example's app app bar, but only if the
 // app is built for web or desktop. Main usage in the examples was to show
 // licenses on the Web version and to show what version of Flutter the Live

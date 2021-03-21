@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-// It is not necessary to review or understand the code in this file in order
-// to understand how to use the FlexColorScheme package demonstrated in
-// the examples.
-
 // Draw a number of boxes showing the colors of key theme color properties
 // in the ColorScheme of the inherited ThemeData and some of its key color
 // properties.

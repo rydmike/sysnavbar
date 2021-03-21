@@ -75,6 +75,7 @@ class _HomePageState extends State<HomePage> {
   late bool isSidePanelExpanded;
   late bool showSidePanel;
   late double opacity;
+  late bool useSysNavDivider;
 
   @override
   void initState() {
@@ -86,6 +87,8 @@ class _HomePageState extends State<HomePage> {
     // will become visible, this can also be used if desired. You can try it
     // with the slider in this example.
     opacity = 0.01;
+    // Used to control if we have a top divider on the system navigation bar.
+    useSysNavDivider = false;
   }
 
   @override
@@ -239,7 +242,6 @@ class _HomePageState extends State<HomePage> {
       // For more info see: https:///github.com/flutter/flutter/issues/69999.
       value: FlexColorScheme.themedSystemNavigationBar(
         context,
-
         // In this example we only do the system navbar opacity if we are on
         // Android and the level was > 29. The opacity does not work
         // on lower levels and if we apply it, it will only make our color
@@ -247,6 +249,8 @@ class _HomePageState extends State<HomePage> {
         // system navbar scrim, which does not look pretty, to avoid that
         // we keep the color fully opaque for other SDK levels.
         opacity: widget.androidLevel > 29 ? opacity : 1,
+        // We can toggle the divider ON/OFF it also gets transparency
+        useDivider: useSysNavDivider,
       ),
       child: Row(
         children: <Widget>[
@@ -409,6 +413,17 @@ class _HomePageState extends State<HomePage> {
                         'the current Android SDK level and make sure the '
                         'background color is kept for such devices. ',
                       ),
+                    ),
+                    SwitchListTile.adaptive(
+                      title: const Text(
+                        'System navbar has divider',
+                      ),
+                      value: useSysNavDivider,
+                      onChanged: (bool value) {
+                        setState(() {
+                          useSysNavDivider = value;
+                        });
+                      },
                     ),
                     const Divider(),
                     // Open a sub-page

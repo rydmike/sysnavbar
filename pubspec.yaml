@@ -1,6 +1,7 @@
 name: sysnavbar
 description: Transparent Android system navigation bar with Flutter and FlexColorScheme package.
-version: 1.0.0
+version: 1.1.0
+publish_to: 'none'
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
@@ -17,7 +18,7 @@ dependencies:
 
   # Color scheme package (by Mike Rydstrom, rydmike.com).
   # https://pub.dev/packages/flex_color_scheme
-  flex_color_scheme: ^2.0.0
+  flex_color_scheme: ^2.1.0
 
   # The Flutter SDK (by Google flutter.dev).
   flutter:

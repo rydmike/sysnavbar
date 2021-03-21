@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-// It is not necessary to review or understand the code in this file in order
-// to understand how to use the FlexColorScheme package demonstrated in
-// the examples.
-
 // Theme showcase for the current theme.
 //
 // Use this widget to review your theme's impact on [ThemeData] and see

@@ -2,10 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-// It is not necessary to review or understand the code in this file in order
-// to understand how to use the FlexColorScheme package demonstrated in
-// the examples.
-
 // An URL link TextSpan that contain an URL link that can be used as a
 // working URL link text when using it in a [Text.rich] or lower
 // level [RichText] widget.

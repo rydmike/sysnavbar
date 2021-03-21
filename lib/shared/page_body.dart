@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'constants.dart';
 
-// It is not necessary to review or understand the code in this file in order
-// to understand how to use the FlexColorScheme package demonstrated in
-// the examples.
-
 // A wrapper for a page body.
 //
 // It provides the following features to the content of the page:

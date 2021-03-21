@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 
-// It is not necessary to review or understand the code in this file in order
-// to understand how to use the FlexColorScheme package demonstrated in
-// the example.
-
 // The side panel and all widgets in this file in this example have no actual
 // function for the demo, other than to create a visual demo of what the
 // example theme looks like with a side rail or side menu that uses the primary

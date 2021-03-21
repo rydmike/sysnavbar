@@ -4,17 +4,6 @@ import 'package:flutter/services.dart';
 
 import '../all_shared_imports.dart';
 
-// It is not necessary to review or understand the code in this file in order
-// to understand how to use the FlexColorScheme package demonstrated in
-// the examples.
-//
-// For this Android Sysnavbar demo, it is however helpful to look this example
-// page as well.
-//
-// The original version of this sub page is used as a demo in FlexColorScheme
-// package examples 4 and 5 to show a sub-page using the same FlexColorScheme
-// based theme.
-//
 class Subpage extends StatefulWidget {
   const Subpage({Key? key, this.androidLevel = 0}) : super(key: key);
   final int androidLevel;
@@ -82,6 +71,7 @@ class _SubpageState extends State<Subpage> {
         // SDK > 29, we keep the system nav bar fully opaque with its
         // background color.
         opacity: widget.androidLevel > 29 ? 0.01 : 1.0,
+        useDivider: false,
       ),
       child: DefaultTabController(
         length: 4,
