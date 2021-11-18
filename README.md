@@ -2,6 +2,11 @@
 
 Transparent Android system navigation bar with Flutter and FlexColorScheme.
 
+> ## FlexColorScheme V4 Notice
+>
+>If you are using FlexColorScheme version 4 and Flutter 2.5 or later, then this example is obsoloete.
+>FlexColorScheme V4 together with Flutter 2.5 or later, support transparent Android system navigation bar without any of the setups discussed here.
+
 ## About this Example
 
 This an extra Android companion example to the Flutter 
